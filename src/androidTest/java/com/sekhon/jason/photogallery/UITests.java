@@ -35,4 +35,37 @@ public class UITests {
             onView(withId(R.id.btnRight)).perform(click());
         }
     }
+
+    @Test
+    public void TestFilter2() {
+        onView(withId(R.id.btnFilter)).perform(click());
+        onView(withId(R.id.search_toDate)).perform(typeText("1111/0911/3120"), closeSoftKeyboard());
+        onView(withId(R.id.search_fromDate)).perform(typeText("12333/211"), closeSoftKeyboard());
+        onView(withId(R.id.search_search)).perform(click());
+        for (int i = 0; i <= 5; i++) {
+            onView(withId(R.id.btnRight)).perform(click());
+        }
+    }
+
+    @Test
+    public void TestFilter3() {
+        onView(withId(R.id.btnFilter)).perform(click());
+        onView(withId(R.id.search_fromDate)).perform(typeText("20170101"), closeSoftKeyboard());
+        onView(withId(R.id.search_toDate)).perform(typeText("20190101"), closeSoftKeyboard());
+        onView(withId(R.id.search_search)).perform(click());
+        for (int i = 0; i <= 5; i++) {
+            onView(withId(R.id.btnRight)).perform(click());
+        }
+    }
+
+    @Test
+    public void TestFilter4() {
+        onView(withId(R.id.btnFilter)).perform(click());
+        onView(withId(R.id.search_fromDate)).perform(typeText("20190101"), closeSoftKeyboard());
+        onView(withId(R.id.search_toDate)).perform(typeText("20180101"), closeSoftKeyboard());
+        onView(withId(R.id.search_search)).perform(click());
+        for (int i = 0; i <= 5; i++) {
+            onView(withId(R.id.btnRight)).perform(click());
+        }
+    }
 }

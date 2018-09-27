@@ -2,13 +2,14 @@ package com.sekhon.jason.photogallery.myapplication;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
-import android.icu.util.Calendar;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 
 import com.sekhon.jason.photogallery.R;
+
+import java.util.Calendar;
 
 public class SearchActivity extends AppCompatActivity {
 
@@ -25,8 +26,9 @@ public class SearchActivity extends AppCompatActivity {
         setContentView(R.layout.activity_search);
         fromDate = (EditText) findViewById(R.id.search_fromDate);
         toDate   = (EditText) findViewById(R.id.search_toDate);
+        new DateInputMask(fromDate);
+        new DateInputMask(toDate);
     }
-
 
     public void cancel(final View v) {
         finish();
