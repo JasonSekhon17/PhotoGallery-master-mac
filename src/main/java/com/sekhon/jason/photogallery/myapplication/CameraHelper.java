@@ -75,8 +75,6 @@ public class CameraHelper extends AppCompatActivity {
         if (ContextCompat.checkSelfPermission(context,
                 Manifest.permission.ACCESS_FINE_LOCATION)
                 == PackageManager.PERMISSION_GRANTED) {
-            latitude = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER).getLatitude();
-            longitude = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER).getLongitude();
             lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 2000, 10, locationListener);
             lm.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 5000, 10, locationListener);
         } else {
