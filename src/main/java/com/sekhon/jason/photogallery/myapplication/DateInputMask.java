@@ -36,8 +36,6 @@ public class DateInputMask{
                 String cleanC = current.replaceAll("[^\\d.]|\\.", "");
                 int cl = clean.length();
                 int sel = cl;
-                Log.d("CLEAN", clean);
-                Log.d("CLEANC", cleanC);
                 for (int i = 4; i <= cl && i <= 6; i += 2) {
                     sel++;
                 }

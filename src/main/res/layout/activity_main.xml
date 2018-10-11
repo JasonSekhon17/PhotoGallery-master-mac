@@ -13,31 +13,30 @@
 
     <ImageView
         android:id="@+id/ivMain"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_width="0dp"
 
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
+        android:layout_height="225dp"
         android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
         android:adjustViewBounds="true"
-        android:maxHeight="42dp"
         android:maxWidth="42dp"
+        android:maxHeight="42dp"
         android:scaleType="fitXY"
         android:src="@mipmap/ic_launcher"
         app:layout_constraintBottom_toTopOf="@+id/btnRight"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintVertical_bias="0.666" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/btnLeft"
@@ -52,6 +51,22 @@
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toTopOf="@+id/btnDisplay" />
 
+
+    <Button
+        android:id="@+id/btnSave"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_below="@+id/imageDate"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="8dp"
+        android:text="SAVE"
+        app:layout_constraintBottom_toBottomOf="@+id/caption"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/caption"
+        app:layout_constraintTop_toTopOf="@+id/caption"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/btnRight"
@@ -97,17 +112,19 @@
         android:id="@+id/imageDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/btnLeft"
-        android:layout_alignStart="@+id/btnLeft"
         android:layout_below="@+id/ivMain"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_alignStart="@+id/btnLeft"
+        android:layout_alignLeft="@+id/btnLeft"
         android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/filterDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintLeft_toRightOf="@+id/btnLeft"
         app:layout_constraintRight_toLeftOf="@+id/btnRight"
-        app:layout_constraintTop_toBottomOf="@+id/ivMain" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivMain"
+        app:layout_constraintVertical_bias="0.37" />
 
     <TextView
         android:id="@+id/filterDate"
@@ -115,14 +132,14 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/btnFilter"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="64dp"
-        android:layout_marginLeft="2dp"
-        android:layout_marginRight="2dp"
+        android:layout_marginBottom="28dp"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintLeft_toRightOf="@+id/btnDisplay"
-        app:layout_constraintRight_toLeftOf="@+id/btnSettings" />
+        app:layout_constraintRight_toLeftOf="@+id/btnSettings"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnDisplay"
@@ -152,4 +169,39 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/btnCamera"
         app:layout_constraintRight_toRightOf="parent" />
+
+    <EditText
+        android:id="@+id/caption"
+        android:selectAllOnFocus="true"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="Caption"
+        android:inputType="textPersonName"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnLeft"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivMain" />
+
+    <TextView
+        android:id="@+id/lon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivMain" />
+
+    <TextView
+        android:id="@+id/lat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnRight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lon" />
 </android.support.constraint.ConstraintLayout>
