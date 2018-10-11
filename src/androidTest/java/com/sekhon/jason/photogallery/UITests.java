@@ -1,7 +1,6 @@
 package com.sekhon.jason.photogallery;
 
 import android.support.test.InstrumentationRegistry;
-import android.support.test.filters.LargeTest;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 import android.test.ActivityInstrumentationTestCase2;
@@ -28,7 +27,6 @@ import static android.support.test.espresso.matcher.ViewMatchers.withId;
  */
 
 @RunWith(AndroidJUnit4.class)
-@LargeTest
 public class UITests {
 
     String[] fromTimes;
@@ -45,7 +43,7 @@ public class UITests {
 
 
     @Before
-    public void SetUp() throws Exception{
+    public void SetUp(){
         fromTimes = new String[]{"2018/12/30", "20170101", "20150101"};
         toTimes = new String[]{"2018/09/20", "20190101", "20190101"};
         minLats = new String[]{"-90", "20", "0"};
