@@ -1,17 +1,12 @@
 package com.sekhon.jason.photogallery;
 
-import android.support.test.InstrumentationRegistry;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
-import android.test.ActivityInstrumentationTestCase2;
-import android.view.View;
-import android.widget.Button;
 
 import com.sekhon.jason.photogallery.myapplication.MainActivity;
 
 import org.junit.After;
 import org.junit.Before;
-import org.junit.FixMethodOrder;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
